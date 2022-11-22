@@ -1,0 +1,27 @@
+version: '3'
+networks:
+  kirana_net:
+
+
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: python.dockerfile
+    container_name: kirana-api
+    command: python api/app.py
+    ports:
+      - 8080:8080
+    volumes:
+      - ./api:/app/api
+    networks:
+      - kirana_net
+  webclient:
+    build:
+      context: ./kirana-client
+      dockerfile: vue.dockerfile
+    container_name: kirana-client-web
+    ports:
+      - 80:80
+    networks:
+      - kirana_net

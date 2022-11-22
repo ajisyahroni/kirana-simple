@@ -1,0 +1,9 @@
+sklearn
+scikit-learn
+nltk
+sastrawi
+pandas
+flask
+waitress
+python-dotenv
+flask_cors
