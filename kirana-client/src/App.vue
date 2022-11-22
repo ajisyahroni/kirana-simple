@@ -166,7 +166,7 @@ export default {
           content: msg,
         });
 
-        fetch("http://localhost:8080/chat", {
+        fetch("http://146.190.99.70:8080/chat", {
           method: "POST",
           body: JSON.stringify({ text: msg }),
           headers: { "Content-Type": "application/json" },
